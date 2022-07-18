@@ -1,3 +1,15 @@
+#' Get genres
+#'
+#' FIXME
+#'
+#' @param live logical value indicating if list of authors should be retrieved live, or from internal data.
+#'
+#' @return None
+#'
+#' @examples
+#' get_genres()
+#'
+#' @export
 
 
 

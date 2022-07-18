@@ -1,4 +1,16 @@
-require(rvest)
+#' Get categories
+#'
+#' FIXME
+#'
+#' @param live logical value indicating if list of authors should be retrieved live, or from internal data.
+#'
+#' @return None
+#'
+#' @examples
+#' get_categories()
+#'
+#' @export
+
 get_categories <- function(){
   base_url <- "https://api.kb.dk/data/text"
 
