@@ -1,0 +1,19 @@
+require(rvest)
+get_categories <- function(){
+  base_url <- "https://api.kb.dk/data/text"
+
+  test <- rvest::read_html(base_url)
+
+  res <- test %>%
+    html_element("#cat_ssi") %>%
+    html_elements("option") %>%
+    html_attrs() %>%
+    unlist()
+  unname(res[nchar(res)>0])
+}
+
+# den kan nok også med fordel have en "non-live" option
+# og så kommer den ud som en named character vector.
+# det skal der nok gøres noget ved.
+
+get_categories()
