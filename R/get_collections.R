@@ -12,6 +12,7 @@
 #' @export
 
 get_collections <- function(){
+  navn <- NULL
   base_url <- "https://api.kb.dk/data/"
 
   rvest::read_html(base_url) %>%
@@ -20,7 +21,7 @@ get_collections <- function(){
     "navn" = rvest::html_attr(., "href"),
     "beskrivelse" = rvest::html_text(.)
   )) %>%
-  mutate(link = paste0(base_url, navn))
+  dplyr::mutate(link = paste0(base_url, navn))
 }
 # Hvis ovenstående fejler - returner denne:
 # navn         beskrivelse                        link

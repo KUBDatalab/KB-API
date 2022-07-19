@@ -17,9 +17,9 @@ get_categories <- function(){
   test <- rvest::read_html(base_url)
 
   res <- test %>%
-    html_element("#cat_ssi") %>%
-    html_elements("option") %>%
-    html_attrs() %>%
+    rvest::html_element("#cat_ssi") %>%
+    rvest::html_elements("option") %>%
+    rvest::html_attrs() %>%
     unlist()
   unname(res[nchar(res)>0])
 }
@@ -28,4 +28,3 @@ get_categories <- function(){
 # og så kommer den ud som en named character vector.
 # det skal der nok gøres noget ved.
 
-get_categories()
