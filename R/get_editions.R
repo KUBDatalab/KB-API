@@ -1,3 +1,15 @@
+#' Get editions
+#'
+#' FIXME
+#'
+#' @param live logical value indicating if list of authors should be retrieved live, or from internal data.
+#'
+#' @return None
+#'
+#' @examples
+#' get_editions()
+#'
+#' @export
 
 
 get_editions <- function(){
